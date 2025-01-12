@@ -34,7 +34,7 @@ gem "bootstrap", "~> 5.3.3"
 gem "sassc-rails"
 gem "sprockets-rails"
 gem "jquery-rails"
-
+gem "devise-bootstrap-views", "~> 1.0"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
