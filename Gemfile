@@ -28,7 +28,12 @@ gem "solid_queue"
 gem "solid_cable"
 
 # Requirements for applications --------------------------Hatice celik
-gem 'devise'
+gem "devise"
+gem "dartsass-rails"
+gem "bootstrap", "~> 5.3.3"
+gem "sassc-rails"
+gem "sprockets-rails"
+gem "jquery-rails"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
