@@ -7,3 +7,4 @@
 //= link bootstrap.min.js
 //= link popper.js
 //= link application.css
+//= link @rails--ujs.js

@@ -106,7 +106,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    concurrent-ruby (1.3.4)
+    concurrent-ruby (1.3.5)
     connection_pool (2.5.0)
     crass (1.0.6)
     csv (3.3.2)
@@ -185,6 +185,10 @@ GEM
       bigdecimal
       rake (>= 13)
     hashie (4.1.0)
+    hotwire-rails (0.1.3)
+      rails (>= 6.0.0)
+      stimulus-rails
+      turbo-rails
     httparty (0.22.0)
       csv
       mini_mime (>= 1.0.0)
@@ -219,7 +223,7 @@ GEM
       thor (~> 1.3)
       zeitwerk (>= 2.6.18, < 3.0)
     language_server-protocol (3.17.0.3)
-    logger (1.6.4)
+    logger (1.6.5)
     loofah (2.24.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -326,7 +330,7 @@ GEM
       zeitwerk (~> 2.6)
     rainbow (3.1.1)
     rake (13.2.1)
-    rdoc (6.10.0)
+    rdoc (6.11.0)
       psych (>= 4.0.0)
     regexp_parser (2.10.0)
     reline (0.6.0)
@@ -495,6 +499,7 @@ DEPENDENCIES
   devise
   devise-bootstrap-views (~> 1.0)
   font-awesome-rails
+  hotwire-rails
   httparty
   importmap-rails
   jbuilder

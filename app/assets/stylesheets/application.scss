@@ -1,3 +1,9 @@
-@import "bootstrap";
-@import 'custom';
-@import "font-awesome";
+// @import "bootstrap";
+// @import 'custom';
+// @import "font-awesome";
+
+@use "custom";
+@use "font-awesome";
+@use "bootstrap/mixins/banner";
+@use "bootstrap/functions";
+@use "font-awesome/css/font-awesome";
