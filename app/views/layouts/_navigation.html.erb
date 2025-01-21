@@ -1,20 +1,38 @@
- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <!-- Navbar Brand -->
+    <%= link_to 'FinanceTracker', root_path, class: "navbar-brand" %>
 
-      <div class="container">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <% if current_user %>
+      <!-- Navbar Toggler -->
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#navbarScroll" 
+        aria-controls="navbarScroll" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Collapsible Navbar -->
       <div class="collapse navbar-collapse" id="navbarScroll">
+        <!-- Left-aligned Navbar Links -->
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <li class="nav-item active ">
+              <%= link_to 'My Portfolio', my_portfolio_path, class: "nav-link #{'active' if request.path == my_portfolio_path}" %>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a 
+              class="nav-link dropdown-toggle" 
+              href="#" 
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false">
               Link
             </a>
             <ul class="dropdown-menu">
@@ -28,11 +46,28 @@
             <a class="nav-link disabled" aria-disabled="true">Link</a>
           </li>
         </ul>
+
+        <!-- Right-aligned Navbar Links -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'btn btn-danger me-2' %>
+          </li>
+        </ul>
+
+        <!-- Search Form -->
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <input 
+            class="form-control me-2" 
+            type="search" 
+            placeholder="Search" 
+            aria-label="Search">
+          <button 
+            class="btn btn-outline-success" 
+            type="submit">
+            Search
+          </button>
         </form>
       </div>
-
-      </div>
-    </nav>
+    <% end %>
+  </div>
+</nav>
