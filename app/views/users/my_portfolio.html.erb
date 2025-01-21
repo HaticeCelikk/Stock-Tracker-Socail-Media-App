@@ -21,3 +21,7 @@
 <turbo-frame id="results">
   <!-- İçerikler buraya gelecek -->
 </turbo-frame>
+
+<% if !@tracked_stocks.empty? %>
+  <%= render 'stocks/list'%>
+<% end %>
