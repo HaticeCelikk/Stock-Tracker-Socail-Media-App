@@ -43,4 +43,9 @@ class Stock < ApplicationRecord
       nil
     end
   end
+
+  def self.check_db(ticker_symbol) #it checks if it is added before in my database
+    where(ticker: ticker_symbol).first
+    
+  end
 end
