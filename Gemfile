@@ -38,6 +38,7 @@ gem "devise-bootstrap-views", "~> 1.0"
 gem "alphavantage"
 gem "httparty"
 gem "font-awesome-rails"
+gem 'font-awesome-sass', '~> 6.0'
 gem "byebug"
 gem 'hotwire-rails'
 

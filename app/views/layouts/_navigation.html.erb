@@ -33,10 +33,14 @@
               role="button" 
               data-bs-toggle="dropdown" 
               aria-expanded="false">
-              Link
+              Profile
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
+          
+              <%= link_to  edit_user_registration_path , class:"dropdown-item" do%>
+                <%= fa_icon 'edit'%> Edit Profile
+
+              <%end%>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -49,6 +53,9 @@
 
         <!-- Right-aligned Navbar Links -->
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item me-2 mt-2">
+            <%= fa_icon 'user'%>  <%= current_user.full_name%>
+          </li>
           <li class="nav-item">
             <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: 'btn btn-danger me-2' %>
           </li>
